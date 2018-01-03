@@ -10,8 +10,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/send', (req, res, next) => {
-	const email = req.body.email;
-	const transporter = nodemailer.createTransport({
+	const transporter = nodemailer.createTransport('SMTP', {
 		service: 'Gmail',
 		auth: {
 			user: 'zakeria.hussien@gmail.com',
@@ -20,7 +19,7 @@ router.post('/send', (req, res, next) => {
 	});
 	// Data to send
 	const mailOptions = {
-		from: "'Zakeria Ali' <" + email + ">",
+		from: "'Zakeria Ali' <" + req.body.email + ">",
 		to: 'ha225ahmed@gmail.com',
 		subject: 'Message from ' + req.body.name,
 		html: '<p>You have been sent a message from PC Repair:</p><ul><li><p>Name: ' + req.body.name + '</p></li><li><p>Email: ' + req.body.email + '</p></li><li><p>Message: ' + req.body.message + '</p></li>'
@@ -31,7 +30,7 @@ router.post('/send', (req, res, next) => {
 			return console.log(err);
 		}
 		console.log("Message sent " + info.response);
-		res.redirect('/');
+		res.send('Done'); 
 		console.log(req.body.email);
 	});
 });
