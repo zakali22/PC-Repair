@@ -30,7 +30,7 @@ router.post('/send', (req, res, next) => {
 			return console.log(err);
 		}
 		console.log("Message sent " + info.response);
-		res.send('Done'); 
+		res.redirect('/');
 		console.log(req.body.email);
 	});
 });
