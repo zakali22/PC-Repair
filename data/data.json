@@ -1,0 +1,22 @@
+[
+	{
+		"name": "Hardware Repair",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin arcu massa, id sollicitudin odio malesuada eu. Etiam laoreet, ipsum nec commodo vulputate, ex neque pulvinar tortor, quis condimentum urna odio finibus tellus. Donec rhoncus imperdiet vehicula. Suspendisse at risus sapien. Nullam id massa sit amet sem accumsan ultricies eget a neque. Quisque sed maximus est. Praesent eget felis nec urna consequat dictum. Sed vel lectus eleifend, interdum nisl vel, efficitur erat. Sed eget est ut lorem euismod lobortis. In maximus mattis tristique.",
+		"price-range": "£150-£200"
+	},
+	{
+		"name": "Virus Removal",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin arcu massa, id sollicitudin odio malesuada eu. Etiam laoreet, ipsum nec commodo vulputate, ex neque pulvinar tortor, quis condimentum urna odio finibus tellus. Donec rhoncus imperdiet vehicula. Suspendisse at risus sapien. Nullam id massa sit amet sem accumsan ultricies eget a neque. Quisque sed maximus est. Praesent eget felis nec urna consequat dictum. Sed vel lectus eleifend, interdum nisl vel, efficitur erat. Sed eget est ut lorem euismod lobortis. In maximus mattis tristique.",
+		"price-range": "£350-£700"
+	},
+	{
+		"name": "Network Service",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin arcu massa, id sollicitudin odio malesuada eu. Etiam laoreet, ipsum nec commodo vulputate, ex neque pulvinar tortor, quis condimentum urna odio finibus tellus. Donec rhoncus imperdiet vehicula. Suspendisse at risus sapien. Nullam id massa sit amet sem accumsan ultricies eget a neque. Quisque sed maximus est. Praesent eget felis nec urna consequat dictum. Sed vel lectus eleifend, interdum nisl vel, efficitur erat. Sed eget est ut lorem euismod lobortis. In maximus mattis tristique.",
+		"price-range": "£1500-£2000"
+	},
+	{
+		"name": "PC Upgrade and Tune up",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin arcu massa, id sollicitudin odio malesuada eu. Etiam laoreet, ipsum nec commodo vulputate, ex neque pulvinar tortor, quis condimentum urna odio finibus tellus. Donec rhoncus imperdiet vehicula. Suspendisse at risus sapien. Nullam id massa sit amet sem accumsan ultricies eget a neque. Quisque sed maximus est. Praesent eget felis nec urna consequat dictum. Sed vel lectus eleifend, interdum nisl vel, efficitur erat. Sed eget est ut lorem euismod lobortis. In maximus mattis tristique.",
+		"price-range": "£1250-£2500"
+	}
+]

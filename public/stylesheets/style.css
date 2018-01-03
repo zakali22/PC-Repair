@@ -1,8 +1,38 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+
+.summary {
+	margin-top: 40px;
+}
+
+.message {
+	flex-direction: column;
+	text-align: left;
+	margin-top: 50px;
+}
+
+.about, .form { 
+	padding-top: 80px;
+}
+
+.service {
+	padding-top: 60px;
+}
+
+footer {
+	position: fixed;
+	bottom: 10px;
+	left: 20px;
+
+}
+
+@media (max-width: 768px) {
+	#keyboard {
+		display: none;
+	}
 }

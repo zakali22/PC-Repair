@@ -1,0 +1,20 @@
+<% include partials/head %>
+
+<div class="container mt-5 service">
+	<h1 class="text-center mb-3">Our Services</h1>
+	<div class="row">
+		<% service.forEach((data) => { %>
+			<div class="col-md-12">
+				<div class="card text-white bg-info mb-3">
+					<div class="card-header"><h1><%= data.name %></h1></div>
+					<div class="card-body">
+						<p class="card-text"><%= data.description %></p>
+						<p class="card-title text-center" style="font-size: 20px; background-color: white; color: black;"><%= data["price-range"] %></p>
+					</div>
+				</div>
+			</div>
+		<% }) %>
+	</div>
+</div>
+
+<% include partials/footer %>
