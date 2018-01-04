@@ -52,7 +52,6 @@ app.use(function(err, req, res, next) {
 });
 
 // Mail sending
-
 mailer.extend(app, {
   from: 'zakeria.hussien@gmail.com',
   host: 'smtp.gmail.com', // hostname 
@@ -63,6 +62,21 @@ mailer.extend(app, {
     user: 'zakeria.hussien@gmail.com',
     pass: 'Cairo2years2010'
   }
+});
+
+app.post('contact/send', (req, res, next) => {
+	app.mailer.send('email', {
+	    to: 'ha225ahmed@gmail.com', // REQUIRED. This can be a comma delimited string just like a normal email to field.  
+	    subject: 'Message from ' + req.body.name // REQUIRED. 
+	  }, (err) => {
+	    if (err) {
+	      // handle error 
+	      console.log(err);
+	      res.send('There was an error sending the email');
+	      return;
+	    }
+	    res.send('Email Sent');
+	});
 });
 
 module.exports = app;
