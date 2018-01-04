@@ -3,6 +3,20 @@ const router = express.Router();
 const mailer = require('express-mailer');
 const app = express();
 
+
+mailer.extend(app, {
+  from: 'zakeria.hussien@gmail.com',
+  host: 'smtp.gmail.com', // hostname 
+  secureConnection: true, // use SSL 
+  port: 465, // port for secure SMTP 
+  transportMethod: 'SMTP', // default is SMTP. Accepts anything that nodemailer accepts 
+  auth: {
+    user: 'zakeria.hussien@gmail.com',
+    pass: 'Cairo2years2010'
+  }
+});
+
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('contact', { 
