@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const nodemailer = require('nodemailer');
+const mailer = require('express-mailer');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -10,28 +10,17 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/send', (req, res, next) => {
-	const transporter = nodemailer.createTransport({
-		host: 'smtp.gmail.com',
-		auth: {
-			user: 'zakeria.hussien@gmail.com',
-			pass: 'Cairo2years2010'
-		}
-	});
-	// Data to send
-	const mailOptions = {
-		from: "'Zakeria Ali' <" + req.body.email + ">",
-		to: 'ha225ahmed@gmail.com',
-		subject: 'Message from ' + req.body.name,
-		html: '<p>You have been sent a message from PC Repair:</p><ul><li><p>Name: ' + req.body.name + '</p></li><li><p>Email: ' + req.body.email + '</p></li><li><p>Message: ' + req.body.message + '</p></li>'
-	};
-	
-	transporter.sendMail(mailOptions, (err, info) => {
-		if(err){
-			return console.log(err);
-		}
-		console.log("Message sent " + info.response);
-		res.redirect('/');
-		console.log(req.body.email);
+	app.mailer.send('email', {
+	    to: 'ha225ahmed@gmail.com', // REQUIRED. This can be a comma delimited string just like a normal email to field.  
+	    subject: 'Message from ' + req.body.name // REQUIRED. 
+	  }, (err) => {
+	    if (err) {
+	      // handle error 
+	      console.log(err);
+	      res.send('There was an error sending the email');
+	      return;
+	    }
+	    res.send('Email Sent');
 	});
 });
 

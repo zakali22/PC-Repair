@@ -4,6 +4,8 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var mailer = require('express-mailer');
+
 
 var main = require('./routes/main');
 var about = require('./routes/about');
@@ -47,6 +49,20 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render('error');
+});
+
+// Mail sending
+
+mailer.extend(app, {
+  from: 'zakeria.hussien@gmail.com',
+  host: 'smtp.gmail.com', // hostname 
+  secureConnection: true, // use SSL 
+  port: 465, // port for secure SMTP 
+  transportMethod: 'SMTP', // default is SMTP. Accepts anything that nodemailer accepts 
+  auth: {
+    user: 'zakeria.hussien@gmail.com',
+    pass: 'Cairo2years2010'
+  }
 });
 
 module.exports = app;
